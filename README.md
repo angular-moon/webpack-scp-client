@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A plugin for webpack as an sftp client
+A plugin for webpack as an sftp client, forked from sqhtiamo/webpack-sftp-client
 
 ## Installation
 
@@ -13,7 +13,7 @@ npm install webpack-sftp-client
 ## Usage
 
 ```
-var WebpackSftpClient = require('webpack-sftp-client');
+const WebpackSftpClient = require('webpack-sftp-client');
 
 new WebpackSftpClient({
     port: '22',
@@ -26,6 +26,5 @@ new WebpackSftpClient({
     verbose: true
 })
 ```
-Copyright (c) 2016 - 2017 zhangyuhang
 
-MIT (http://www.opensource.org/licenses/mit-license.php)
+licenses MIT
