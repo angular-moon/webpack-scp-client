@@ -1,4 +1,4 @@
-# webpack-sftp-client
+# webpack-scp-client
 
 ## Introduction
 
