@@ -1,15 +1,11 @@
 /*!
- *  <https://github.com/sqhtiamo/webpack-sftp-client.git>
- *
- * Copyright (c) 2016-2017, Cloughzhang(Zhang Yuhang).
+ * fork from <https://github.com/sqhtiamo/webpack-sftp-client.git>
  * Licensed under the MIT License.
  */
 
 'use strict';
 
 var ClientLib = require('scp2');
-
-var client = new ClientLib.Client();
 
 function WebpackSftpClient(options) {
     this.options = options;
@@ -21,6 +17,7 @@ WebpackSftpClient.prototype.apply = function (compiler) {
 
     compiler.plugin('done', function (compilation) {
 
+        var client = new ClientLib.Client();
         var remotePath = self.options.remotePath;
         var path = self.options.path;
         var username = self.options.username;
@@ -32,14 +29,9 @@ WebpackSftpClient.prototype.apply = function (compiler) {
         var startTime;
         var endTime;
 
-        client.on('connect', function () {
-            // console.log('connected');
-        });
-
         client.on('ready', function () {
-            // console.log('ready');
             startTime = new Date();
-            console.log('[Start Uploading] ' + startTime);
+            console.log(host + ' [Start Uploading] ' + startTime);
         });
 
         client.on('transfer', function (buf, up, total) {
@@ -47,13 +39,13 @@ WebpackSftpClient.prototype.apply = function (compiler) {
 
         client.on('write', function (p) {
             if (verbose) {
-                console.log('Transfer ' + p.source + ' => ' + p.destination);
+                console.log('Transfer ' + p.source + ' => ' + host + '@' + p.destination);
             }
         });
 
         client.on('end', function () {
             endTime = new Date();
-            console.log('[End Uploading] ' + new Date());
+            console.log(host + ' [End Uploading] ' + new Date());
         });
 
         client.on('error', function (err) {
@@ -61,7 +53,7 @@ WebpackSftpClient.prototype.apply = function (compiler) {
         });
 
         client.on('close', function () {
-            console.log('Transfer with SFTP Completed in [' + (+endTime - +startTime) / 1000 + '] seconds!');
+            console.log(host + ' Transfer with SFTP Completed in [' + (+endTime - +startTime) / 1000 + '] seconds!');
         });
 
 
