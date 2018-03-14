@@ -18,9 +18,9 @@ yarn add -D @angular-moon/webpack-scp-client
 ## Usage
 
 ```
-const WebpackSftpClient = require('@angular-moon/webpack-scp-client');
+const WebpackScpClient = require('@angular-moon/webpack-scp-client');
 
-new WebpackSftpClient({
+new WebpackScpClient({
     port: '22',
     host: 'exmaple.com',
     username: 'root',
