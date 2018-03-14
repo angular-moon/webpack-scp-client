@@ -1,14 +1,14 @@
 {
-  "name": "@angular-moon/webpack-sftp-client",
-  "version": "1.0.1",
-  "description": "a plugin for webpack as an sftp client, fork from sqhtiamo/webpack-sftp-client",
+  "name": "@angular-moon/webpack-scp-client",
+  "version": "1.0.0",
+  "description": "a plugin for webpack as an scp client",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angular-moon/webpack-sftp-client.git"
+    "url": "git+https://github.com/angular-moon/webpack-scp-client.git"
   },
   "keywords": [
     "webpack",
@@ -18,9 +18,9 @@
   "author": "angular-moon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/angular-moon/webpack-sftp-client/issues"
+    "url": "https://github.com/angular-moon/webpack-scp-client/issues"
   },
-  "homepage": "https://github.com/angular-moon/webpack-sftp-client#readme",
+  "homepage": "https://github.com/angular-moon/webpack-scp-client#readme",
   "dependencies": {
     "scp2": "^0.5.0"
   },

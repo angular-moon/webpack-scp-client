@@ -1,4 +1,5 @@
 /*!
+ * A plugin for webpack as an scp client
  * fork from <https://github.com/sqhtiamo/webpack-sftp-client.git>
  * Licensed under the MIT License.
  */
