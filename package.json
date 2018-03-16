@@ -1,6 +1,6 @@
 {
   "name": "@angular-moon/webpack-scp-client",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a plugin for webpack as an scp client",
   "main": "index.js",
   "repository": {
