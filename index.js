@@ -1,17 +1,12 @@
-/*!
- * fork from <https://github.com/sqhtiamo/webpack-sftp-client.git>
- * Licensed under the MIT License.
- */
-
 'use strict';
 
 var ClientLib = require('scp2');
 
-function WebpackSftpClient(options) {
+function WebpackScpClient(options) {
     this.options = options;
 }
 
-WebpackSftpClient.prototype.apply = function (compiler) {
+WebpackScpClient.prototype.apply = function (compiler) {
 
     var self = this;
 
@@ -53,7 +48,7 @@ WebpackSftpClient.prototype.apply = function (compiler) {
         });
 
         client.on('close', function () {
-            console.log(host + ' Transfer with SFTP Completed in [' + (+endTime - +startTime) / 1000 + '] seconds!');
+            console.log(host + ' Transfer Completed in [' + (+endTime - +startTime) / 1000 + '] seconds!');
         });
 
 
@@ -81,4 +76,4 @@ function uploadByDir(src, dest, client) {
     );
 }
 
-module.exports = WebpackSftpClient;
+module.exports = WebpackScpClient;
