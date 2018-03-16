@@ -1,21 +1,26 @@
-# webpack-sftp-client
+# webpack-scp-client
 
 ## Introduction
 
-A plugin for webpack as an sftp client
+A plugin for webpack as an scp client
 
 ## Installation
 
 ```
-npm install webpack-sftp-client
+npm install --save-dev @angular-moon/webpack-scp-client
+
+or
+
+yarn add -D @angular-moon/webpack-scp-client
+
 ```
 
 ## Usage
 
 ```
-var WebpackSftpClient = require('webpack-sftp-client');
+const WebpackScpClient = require('@angular-moon/webpack-scp-client');
 
-new WebpackSftpClient({
+new WebpackScpClient({
     port: '22',
     host: 'exmaple.com',
     username: 'root',
@@ -26,6 +31,5 @@ new WebpackSftpClient({
     verbose: true
 })
 ```
-Copyright (c) 2016 - 2017 zhangyuhang
 
-MIT (http://www.opensource.org/licenses/mit-license.php)
+licenses MIT

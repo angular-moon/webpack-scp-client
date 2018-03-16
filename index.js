@@ -1,3 +1,8 @@
+/*!
+ * A plugin for webpack as an scp client
+ * Licensed under the MIT License.
+ */
+
 'use strict';
 
 var ClientLib = require('scp2');
